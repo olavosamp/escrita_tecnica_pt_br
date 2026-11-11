@@ -44,17 +44,88 @@ Não escreva título que esconde o assunto para o leitor ter que ler o parágraf
 - "Um número que muda o desenho da extração" → "Nota sobre a arquitetura do extrator"
 - "Cinco regras que não mudam desde o primeiro dia" → "Cinco regras que não mudam"
 
-Não use frase de efeito como título de parágrafo, nem aforismo, nem antítese ("X não é A, é B"),
-nem paralelismo de impacto. Se a frase de efeito resume o parágrafo, ela é redundante: apague e
-diga a coisa diretamente.
+Não use frase de efeito como título de parágrafo, nem aforismo, nem antítese, nem paralelismo de
+impacto. Se a frase de efeito resume o parágrafo, ela é redundante: apague e diga a coisa
+diretamente.
 
 - "Você mirou no sotaque; o defeito é a veracidade." → "O problema não está no vocabulário. Está
   em afirmar que o código funciona sem ter rodado."
 - "O teste honesto é o turno 40, não o turno 1." → "Um teste no turno 1 não mede esquecimento de
   contexto. Para isso é necessário um teste em turno alto, por exemplo no turno 40."
 
-Títulos devem ter a primeira letra maiúscula e as demais, minúsculas. Título nomeia o assunto. Palavra-chave em primeiro lugar. Evite título de uma palavra se ele quando ficar ambíguo: "Autenticação" → "Opções de autenticação do sistema". Sem gerúndio em título
+A antítese aparece em várias superfícies e todas contam:
+
+- "X não é A, é B"
+- "X em vez de Y" ("As hipóteses mereceram medição em vez de opinião")
+- "menos A, mais B"
+- "A, não B"
+- "não se trata de A, e sim de B"
+- "o problema não é A, o problema é B"
+
+Em todas, escreva a afirmação direta no lugar: "As hipóteses foram testadas por medição. O
+resultado está abaixo."
+
+Título nomeia o assunto. Palavra-chave em primeiro lugar. Evite título de uma palavra quando ele
+ficar ambíguo: "Autenticação" → "Opções de autenticação do sistema". Sem gerúndio em título
 ("Configurando o ambiente" → "Configuração do ambiente"). Sem pontuação no fim do título.
+
+### Teste do encurtamento
+
+Este é o teste principal, e é mecânico. Encurte o título até o menor sintagma que ainda nomeia o
+assunto. Se o encurtamento não perder informação, as palavras cortadas eram efeito.
+
+Reprovados, porque encurtar não perde nada:
+
+- "A conta que torna a extração completa inviável" → "Custo da extração completa"
+- "O problema, nomeado" → "O problema"
+- "O segredo da extração rápida" → "Extração rápida"
+- "Três coisas sobre a extração" → "A extração"
+- "A verdadeira causa da lentidão" → "Causa da lentidão"
+
+Aprovados, porque encurtar perde o fato que o título carrega:
+
+- "A API não entrega acesso", em que o encurtamento perderia a negação
+- "O que a API não entrega"
+- "Fatia 6: acesso real via analytics", em que o número identifica a fatia
+- "Comparação de estratégias de extração", em que "comparação" diz o que a seção faz
+
+### Gramática não é o teste
+
+Não reprove um título por ser oração com verbo conjugado, nem por ter dois-pontos ou vírgula.
+"A API não entrega acesso" é oração e é bom. "Fatia 6: acesso real" tem dois-pontos e é bom.
+"A verdadeira causa" é sintagma nominal e é ruim. A forma gramatical não separa informação de
+efeito, e usá-la como teste reprova título bom e aprova título ruim.
+
+### Teste do índice
+
+Quando o encurtamento for ambíguo, aplique este: o título funciona sozinho num índice, lido por
+quem não leu o documento? Se for preciso ler a seção para saber do que ela trata, reescreva.
+
+### Construções bloqueadas em título
+
+Lista fechada, por serem quase sempre efeito. Independem da forma gramatical.
+
+| Construção | Exemplo | Troque por |
+|---|---|---|
+| "O segredo de", "A verdade sobre", "O que ninguém conta" | "O segredo do cache" | "Funcionamento do cache" |
+| "O verdadeiro X", "O X real", "O X que importa" | "A verdadeira causa" | "Causa" |
+| "N coisas", "N motivos", "N lições" | "Três coisas sobre o deploy" | "Deploy" |
+| Aposto que comenta o título | "O problema, nomeado" | "O problema" |
+| "Por que X é Y", quando a seção não argumenta | "Por que o cache é lento" | "Latência do cache" |
+| Metáfora | "O elefante na sala" | o nome da coisa |
+
+### Capitalização
+
+Duas formas aceitas, e uma rejeitada. Escolha uma e mantenha no documento inteiro.
+
+```
+Certo:  Comparação de estratégias de extração
+Certo:  Comparação de Estratégias de Extração
+Errado: comparação de estratégias de extração
+```
+
+Na segunda forma, preposição e artigo curtos ficam em caixa baixa: "de", "da", "do", "e", "em",
+"para", "por".
 
 ## 2. Corte o que não carrega informação
 
@@ -170,7 +241,8 @@ gravado no bucket". Se o agente for conhecido e relevante, use-o como sujeito.
 
 - Sem ponto e vírgula no texto corrido. Escreva duas frases.
 - Travessão: Evitar usar porque IA não tem uma relação boa com essa ferramenta. Os únicos casos POSITIVOS: como aposto ("você - meu amigo - falou isso") ou ressalva ("Ele era belo - apesar de ser tolo"). NEGATIVOS: Não é pausa de efeito nem substituto de ponto ("Explique o porquê, não o quê — o código já diz o quê" deveria ser "Explique o porquê, não o quê. O código já diz o quê"). 
-- Cabeçalho com a inicial maiúscula e o resto em caixa baixa.
+- Cabeçalho na inicial maiúscula com o resto em caixa baixa, ou em Caixa Alta de Título. Ver a
+  seção 1. Caixa baixa em tudo é erro.
 - Decimal com vírgula, data em dd/mm/aaaa, fora de código e arquivo de configuração.
 - Número: 0 a 9 por extenso no texto corrido; 10 ou mais em algarismo; sempre algarismo quando vem
   com unidade (3 MIPS, 8 s, 24 MB) ou em referência estrutural (Passo 4, Seção 6.2).
@@ -200,6 +272,10 @@ assunto do commit; aplicam-se ao corpo, se houver.
 cortesia, sem recapitular passo a passo o que o usuário acompanhou, sem parágrafo final de
 conclusão. Se algo não foi verificado, diga que não foi.
 
+A primeira frase é o fato mais importante, e nunca uma frase sobre o próprio resumo. "Cinco coisas
+mereceram medição em vez de opinião" anuncia o conteúdo sem entregar nada. "As hipóteses foram
+testadas por medição, abaixo" entrega. Melhor ainda: comece pelo resultado da medição.
+
 **Plano.** Passos numerados, um resultado observável por passo, e o que fica fora de escopo.
 
 > Estas três últimas seções — PR, commit e resumo — ainda não foram calibradas com exemplos reais.
@@ -223,8 +299,10 @@ Na dúvida entre uma frase mais longa e clara e uma mais curta e ambígua, fique
 
 Antes de entregar, passe por esta lista:
 
-1. Algum título ou abertura desperta curiosidade em vez de nomear o assunto? Reescreva.
-2. Alguma frase de efeito, aforismo ou antítese? Diga a coisa diretamente.
+1. Cada título passa no teste do encurtamento da seção 1? Encurte e veja se perde informação.
+   Se não perder, use a versão curta. Confira também a lista de construções bloqueadas em título.
+2. Alguma frase de efeito, aforismo ou antítese em qualquer das superfícies da seção 1?
+   Diga a coisa diretamente.
 3. Alguma frase pode ser apagada inteira sem perda? Apague.
 4. Alguma pessoa como sujeito, "-se" de indeterminação, futuro de intenção ou primeira pessoa?
    Ponha a coisa técnica como sujeito, no presente.
@@ -234,9 +312,13 @@ Antes de entregar, passe por esta lista:
 8. A mesma coisa com dois nomes? Escolha um.
 9. Nominalização no lugar do verbo, intensificador vazio, meta-comentário, adjetivo de marketing?
    Corte.
-10. Ponto e vírgula, mais de um travessão no parágrafo, negrito de ênfase, emoji? Corrija.
-11. O último parágrafo repete o que já foi dito? Apague.
-12. Alguma frase ficou ambígua depois do corte? Devolva a palavra que faltou.
+10. Ponto e vírgula, negrito de ênfase, emoji não informativo? Corrija.
+11. Cada travessão introduz aposto ou ressalva? Se o que vem depois for oração independente, com
+    sujeito e verbo próprios, é pausa de efeito: troque por ponto. Contar travessão não basta,
+    porque um só já pode ser efeito.
+12. O último parágrafo repete o que já foi dito? Apague.
+13. No resumo em chat, a primeira frase entrega um fato ou anuncia o conteúdo? Entregue o fato.
+14. Alguma frase ficou ambígua depois do corte? Devolva a palavra que faltou.
 
 Escreva apenas o texto pedido. Sem preâmbulo e sem comentário final sobre o que você fez.
 Exceção: no resumo de tarefa dentro do chat, o texto é o próprio turno de conversa.
